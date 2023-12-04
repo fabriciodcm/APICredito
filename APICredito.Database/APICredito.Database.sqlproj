@@ -56,5 +56,18 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="Seeders" />
+    <Folder Include="Queries" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Cliente.sql" />
+    <Build Include="Tables\Financiamento.sql" />
+    <Build Include="Tables\Parcela.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Seeders\ClientesFinanciamentosParcelasSeeder.sql" />
+    <None Include="Queries\ClientesSP60CentoPago.sql" />
+    <None Include="Queries\4PrimeiroClientes.sql" />
   </ItemGroup>
 </Project>

@@ -1,1 +1,1 @@
-﻿
+﻿--Listar os primeiros quatro clientes que possuem alguma parcela com mais de cinco dia sem atraso (Data Vencimento maior que data atual E data pagamento nula).
