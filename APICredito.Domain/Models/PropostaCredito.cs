@@ -8,7 +8,7 @@ namespace APICredito.Domain.Models
 {
     public class PropostaCredito 
     {
-        public PropostaCredito(decimal ValorCredito, string TipoCredito, int QuantidadeParcelas, DateTime   DataPrimeiroVencimento)
+        public PropostaCredito(decimal ValorCredito, int TipoCredito, int QuantidadeParcelas, DateTime   DataPrimeiroVencimento)
         {
             if(ValorCredito > 1000000) 
             {
@@ -35,7 +35,7 @@ namespace APICredito.Domain.Models
         }
 
         public decimal ValorCredito { get; protected set; }
-        public string TipoCredito { get; protected set; } = string.Empty;
+        public int TipoCredito { get; protected set; }
         public int QuantidadeParcelas { get; protected set; }
         public DateTime DataPrimeiroVencimento { get; protected set; }
     }

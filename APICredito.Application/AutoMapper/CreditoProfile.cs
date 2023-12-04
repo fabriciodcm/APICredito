@@ -15,9 +15,9 @@ namespace APICredito.Application.AutoMapper
         {
             CreateMap<CreditoViewModel, Credito>()
                  .ConstructUsing(c => new Credito(c.StatusCreditoAprovado,c.ValorTotal,c.ValorJuros,
-                    new PropostaCredito(c.PropostaCredito.ValorCredito,c.PropostaCredito.TipoCredito,c.PropostaCredito.QuantidadeParcelas,c.PropostaCredito.DataPrimeiroVencimento)));
+                    new PropostaCredito(c.PropostaCredito.ValorCredito,(int)c.PropostaCredito.TipoCredito,c.PropostaCredito.QuantidadeParcelas,c.PropostaCredito.DataPrimeiroVencimento)));
 
-            CreateMap<PropostaCredito, PropostaCreditoViewModel>();
+            CreateMap<Credito, CreditoViewModel>();
         }
     }
 }

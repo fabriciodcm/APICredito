@@ -5,10 +5,14 @@ namespace APICredito.Domain.Core
 {
     public abstract class CalculaCreditoCore : ICalculaCreditoCore
     {
-        public virtual Credito Carcular(PropostaCredito Proposta)
+        public virtual Credito Calcular(PropostaCredito Proposta)
         {
-            var juros = Proposta.ValorCredito * (Taxa() / 100);
+            decimal taxa = Taxa();
+
+            var juros = Proposta.ValorCredito * (taxa / 100M);
+
             var valorTotal = Proposta.ValorCredito + juros;
+            
             return new Credito(true, valorTotal, juros , Proposta) ;
         }
 

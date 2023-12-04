@@ -7,14 +7,14 @@ namespace APICredito.Domain.Core
     {
         public override int Taxa() => 5;
 
-        public override Credito Carcular(PropostaCredito Proposta)
+        public override Credito Calcular(PropostaCredito Proposta)
         {
             if(Proposta.ValorCredito < 15000) 
             {
-                throw new InvalidOperationException("Valor inferior ao mínimo para pessoa física.");
+                throw new InvalidOperationException("Valor inferior ao mínimo para pessoa jurídica.");
             }
 
-            return base.Carcular(Proposta);
+            return base.Calcular(Proposta);
         }
     }
 }
