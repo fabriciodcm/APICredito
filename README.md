@@ -1,6 +1,10 @@
-# CreditoAPI
+# APICredito
 API de processamento de liberamento de crédito
-
+                              Desafio ORACLE ou SQL Server
+O Conteúdo se encontra no Projeto APICredito.Database seguindo a organização:
+*Tabelas criadas se encontram na pasta Tables.
+*Comandos para popular as tabelas na pasta Seeders.
+*Comandos de consultas pasta Queries.
                                     Conceitual
 Descreva sobre microsserviços, o que são, como funcionam e exponha um breve exemplo de
 aplicação desse conceito através de um diagrama.
